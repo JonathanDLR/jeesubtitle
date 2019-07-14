@@ -14,6 +14,7 @@ public class SendSubtitleForm {
 	private ArrayList<String> lineNumber = null;
 	private ArrayList<BDDInfo> subs = new ArrayList<BDDInfo>();
 	private int j = 1;
+	private int k;
 	
 	/**
 	 * adding sub to ArrayList
@@ -46,20 +47,18 @@ public class SendSubtitleForm {
 				if (!paramValue.isEmpty() && paramValue != null && !paramName.equals("fileName")) {
 					if (paramName.equals("number"+j)) {
 						subs.get(j-1).setLine_number(Integer.parseInt(paramValue));
-					}
-					if (paramName.equals("min"+j)) {
-						subs.get(j-1).setLine_min(paramValue);
-					}
-					if (paramName.equals("line"+j)) {
-						subs.get(j-1).setLine_text(paramValue);
+						k = j;
 						j = ++j;
+					}
+					if (paramName.equals("min"+k)) {
+						subs.get(k-1).setLine_min(paramValue);
+					}
+					if (paramName.equals("line"+k)) {
+						subs.get(k-1).setLine_text(paramValue);
 					}
 				}
 			}
 		}
-		
-		System.out.println(subs.get(0).getLine_text());
-		System.out.println(subs.get(1).getLine_text());
 	}
 	
 	public String getFileName() {

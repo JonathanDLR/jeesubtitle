@@ -14,6 +14,7 @@ import jdlr.subtitle.beans.BDDTitle;
 import jdlr.subtitle.beans.BeanException;
 import jdlr.subtitle.dao.DAOException;
 import jdlr.subtitle.dao.TitleSubDAO;
+import jdlr.subtitle.dao.InfoSubDAO;
 import jdlr.subtitle.forms.SendSubtitleForm;
 
 /**
@@ -22,6 +23,8 @@ import jdlr.subtitle.forms.SendSubtitleForm;
 @WebServlet("/SendSubtitle")
 public class SendSubtitle extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private TitleSubDAO titleSubDAO;
+	private InfoSubDAO infoSubDAO;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -50,14 +53,19 @@ public class SendSubtitle extends HttpServlet {
 		
 		bddtitle.setFileName(form.getFileName());
 		
-//		TitleSubDAO.addTitle(bddtitle);
-//		
-//		for (String value : form.getSubs()) {
-//			if (value.matches("[0-9]+")) {
-//				BDDInfo bddinfo = new BDDInfo();
-//				bddinfo.setLine_number(Integer.parseInt(value));
-//			}
-//		}
+		try {
+			titleSubDAO.addTitle(bddtitle);
+		} catch (DAOException e) {
+			e.printStackTrace();
+		}
+		
+		for (BDDInfo info : form.getSubs()) {
+			try {
+				infoSubDAO.addInfo(info);
+			} catch (DAOException e) {
+				e.printStackTrace();
+			}
+		}
 		
 		this.getServletContext().getRequestDispatcher("/WEB-INF/send.jsp").forward(request, response);
 	}

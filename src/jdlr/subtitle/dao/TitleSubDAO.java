@@ -6,5 +6,5 @@ import jdlr.subtitle.beans.BDDTitle;
 
 public interface TitleSubDAO {
 	void addTitle(BDDTitle bddtitle) throws DAOException;
-	List<BDDTitle> getAllBDDTitle();
+	List<BDDTitle> getAllBDDTitle() throws DAOException;
 }

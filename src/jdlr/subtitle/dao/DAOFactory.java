@@ -38,7 +38,11 @@ public class DAOFactory {
 	}
 	
 	// Using DAO
-	public infoSubDAO getUserDAO() {
+	public InfoSubDAO getInfoSubDAO() {
 		return new infoSubDAOImpl(this);
+	}
+	
+	public TitleSubDAO getTitleSubDAO() {
+		return new TitleSubDAOImpl(this);
 	}
 }

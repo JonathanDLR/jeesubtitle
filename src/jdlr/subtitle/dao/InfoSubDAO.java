@@ -4,7 +4,7 @@ import java.util.List;
 
 import jdlr.subtitle.beans.BDDInfo;
 
-public interface infoSubDAO {
+public interface InfoSubDAO {
 	void addInfo(BDDInfo bddinfo) throws DAOException;
-	List<BDDInfo> getAllBDDInfo();
+	List<BDDInfo> getAllBDDInfo() throws DAOException;
 }
