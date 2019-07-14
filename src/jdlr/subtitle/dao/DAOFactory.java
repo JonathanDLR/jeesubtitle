@@ -39,7 +39,7 @@ public class DAOFactory {
 	
 	// Using DAO
 	public InfoSubDAO getInfoSubDAO() {
-		return new infoSubDAOImpl(this);
+		return new InfoSubDAOImpl(this);
 	}
 	
 	public TitleSubDAO getTitleSubDAO() {

@@ -7,6 +7,11 @@ import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * data processing of the edit servlet form
+ * @author jdlr
+ *
+ */
 public class EditFileForm {
 	private static final String FILE_NAME = "/home/jdlr/Documents/up_sub/";
 	private String fileToSub;
@@ -32,10 +37,18 @@ public class EditFileForm {
 		return fileList;
 	}
 	
+	/**
+	 * Get file choosed by user
+	 * @param request
+	 * @throws IOException
+	 * @throws ServletException
+	 */
 	public void getFile(HttpServletRequest request) throws IOException, ServletException {
 		fileSubName = request.getParameter("choose");
 		fileToSub = FILE_NAME.concat(fileSubName);
 	}
+	
+	// GETTERS SETTERS
 
 	public String getFileToSub() {
 		return fileToSub;

@@ -1,5 +1,10 @@
 package jdlr.subtitle.beans;
 
+/**
+ * Title of the file
+ * @author jdlr
+ *
+ */
 public class BDDTitle {
 	private String fileName;
 

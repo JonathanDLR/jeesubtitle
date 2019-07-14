@@ -6,10 +6,19 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * Reading file for the view
+ * @author jdlr
+ *
+ */
 public class SubtitlesHandler {
 	private ArrayList<String> originalSubtitles = null;
 	private ArrayList<String> translatedSubtitles = null;
 
+	/**
+	 * reading the file
+	 * @param fileName name of the file
+	 */
 	public SubtitlesHandler(String fileName) {
 		originalSubtitles = new ArrayList<String>();
 		translatedSubtitles = new ArrayList<String>();
@@ -27,6 +36,8 @@ public class SubtitlesHandler {
 			e.printStackTrace();
 		}
 	}
+	
+	// GETTERS
 	
 	public ArrayList<String> getSubtitles() {
 		return originalSubtitles;

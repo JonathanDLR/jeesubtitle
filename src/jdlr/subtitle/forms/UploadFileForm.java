@@ -12,6 +12,11 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.Part;
 
+/**
+ * data processing of upload servlet form
+ * @author jdlr
+ *
+ */
 public class UploadFileForm {
 	public static final int TMP_SIZE = 10240;
 	public static final String FILE_PATH = "/home/jdlr/Documents/up_sub/";
@@ -94,6 +99,8 @@ public class UploadFileForm {
 		
 	}
 
+	// GETTERS SETTERS
+	
 	public String getFileName() {
 		return fileName;
 	}

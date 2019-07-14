@@ -8,6 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 
 import jdlr.subtitle.beans.BDDInfo;
 
+/**
+ * data processing of send servlet form
+ * @author jdlr
+ *
+ */
 public class SendSubtitleForm {
 	private String fileName;
 	private Enumeration<String> paramNames = null;
@@ -47,6 +52,7 @@ public class SendSubtitleForm {
 				if (!paramValue.isEmpty() && paramValue != null && !paramName.equals("fileName")) {
 					if (paramName.equals("number"+j)) {
 						subs.get(j-1).setLine_number(Integer.parseInt(paramValue));
+						subs.get(j-1).setFileName(fileName);
 						k = j;
 						j = ++j;
 					}
@@ -60,6 +66,8 @@ public class SendSubtitleForm {
 			}
 		}
 	}
+	
+	// GETTERS SETTERS
 	
 	public String getFileName() {
 		return fileName;
