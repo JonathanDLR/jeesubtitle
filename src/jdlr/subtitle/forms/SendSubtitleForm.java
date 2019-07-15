@@ -26,11 +26,9 @@ public class SendSubtitleForm {
 	 * @param request
 	 */
 	public void getSubtitle(HttpServletRequest request) {
-		fileName = request.getParameter(fileName);
+		fileName = request.getParameter("fileName");
 		paramNames = request.getParameterNames();
 		lineNumber = Collections.list(paramNames);
-		
-		
 		
 		// Creation object BDDInfo
 		for (String line : lineNumber) {

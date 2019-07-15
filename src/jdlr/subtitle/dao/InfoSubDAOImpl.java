@@ -42,7 +42,7 @@ public class InfoSubDAOImpl implements InfoSubDAO {
 				}
 			} catch (SQLException e2) {
 			}
-			throw new DAOException("Impossible de communiquer avec le base de donnée.");
+			throw new DAOException("Impossible de communiquer avec le base de données.");
 		}
 		finally {
 			try {
@@ -50,7 +50,7 @@ public class InfoSubDAOImpl implements InfoSubDAO {
 					connection.close();
 				}
 			} catch (SQLException e) {
-				throw new DAOException("Impossible de communiquer avec le base de donnée.");
+				throw new DAOException("Impossible de communiquer avec le base de données.");
 			}
 		}
 	}
@@ -83,7 +83,7 @@ public class InfoSubDAOImpl implements InfoSubDAO {
 				BDDInfos.add(bddInfo);
 			}
 		} catch (SQLException e) {
-			throw new DAOException("Impossible de communiquer avec la base de donnée.");
+			throw new DAOException("Impossible de communiquer avec la base de données.");
 		} 
 		finally {
 			try {
@@ -91,7 +91,7 @@ public class InfoSubDAOImpl implements InfoSubDAO {
 					connection.close();
 				}
 			} catch (SQLException e) {
-				throw new DAOException("Impossible de communiquer avec la base de donnée.");
+				throw new DAOException("Impossible de communiquer avec la base de données.");
 			}
 		}
 		return BDDInfos;

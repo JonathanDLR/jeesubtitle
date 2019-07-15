@@ -38,7 +38,7 @@ public class TitleSubDAOImpl implements TitleSubDAO {
 				}
 			} catch (SQLException e2) {
 			}
-			throw new DAOException("Impossible de communiquer avec le base de donnée.");
+			throw new DAOException("Impossible de communiquer avec le base de données.");
 		}
 		finally {
 			try {
@@ -46,7 +46,7 @@ public class TitleSubDAOImpl implements TitleSubDAO {
 					connection.close();
 				}
 			} catch (SQLException e) {
-				throw new DAOException("Impossible de communiquer avec le base de donnée.");
+				throw new DAOException("Impossible de communiquer avec le base de données.");
 			}
 		}
 	}
@@ -72,7 +72,7 @@ public class TitleSubDAOImpl implements TitleSubDAO {
 				BDDTitles.add(bddTitle);
 			}
 		} catch (SQLException e) {
-			throw new DAOException("Impossible de communiquer avec la base de donnée.");
+			throw new DAOException("Impossible de communiquer avec la base de données.");
 		} 
 		finally {
 			try {
@@ -80,7 +80,7 @@ public class TitleSubDAOImpl implements TitleSubDAO {
 					connection.close();
 				}
 			} catch (SQLException e) {
-				throw new DAOException("Impossible de communiquer avec la base de donnée.");
+				throw new DAOException("Impossible de communiquer avec la base de données.");
 			}
 		}
 		return BDDTitles;

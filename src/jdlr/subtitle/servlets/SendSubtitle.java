@@ -13,6 +13,7 @@ import jdlr.subtitle.beans.BDDInfo;
 import jdlr.subtitle.beans.BDDTitle;
 import jdlr.subtitle.beans.BeanException;
 import jdlr.subtitle.dao.DAOException;
+import jdlr.subtitle.dao.DAOFactory;
 import jdlr.subtitle.dao.TitleSubDAO;
 import jdlr.subtitle.dao.InfoSubDAO;
 import jdlr.subtitle.forms.SendSubtitleForm;
@@ -26,13 +27,11 @@ public class SendSubtitle extends HttpServlet {
 	private TitleSubDAO titleSubDAO;
 	private InfoSubDAO infoSubDAO;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public SendSubtitle() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+	public void init() throws ServletException {
+		DAOFactory daoFactory = DAOFactory.getInstance();
+		this.titleSubDAO = daoFactory.getTitleSubDAO();
+		this.infoSubDAO = daoFactory.getInfoSubDAO();
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
