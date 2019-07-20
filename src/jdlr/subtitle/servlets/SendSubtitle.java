@@ -54,15 +54,16 @@ public class SendSubtitle extends HttpServlet {
 		
 		try {
 			titleSubDAO.addTitle(bddtitle);
+			request.setAttribute("fileName", form.getFileName());
 		} catch (DAOException e) {
-			e.printStackTrace();
+			request.setAttribute("error", e.getMessage());
 		}
 		
 		for (BDDInfo info : form.getSubs()) {
 			try {
 				infoSubDAO.addInfo(info);
 			} catch (DAOException e) {
-				e.printStackTrace();
+				request.setAttribute("error", e.getMessage());
 			}
 		}
 		

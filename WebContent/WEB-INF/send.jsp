@@ -9,7 +9,13 @@
 <body>
 	<%@ include file="menu.jsp" %>
 	
-	<h1>Send to BDD OK</h1>
+	<c:choose>
+		<c:when test="${ !empty error }"><p style="color:red;"><c:out value="${ error }" /></p></c:when>
+		
+		<c:otherwise>
+			<p>File <c:out value="${ fileName }" /> send to BDD</p>
+		</c:otherwise>
+	</c:choose>
 	
 </body>
 </html>
