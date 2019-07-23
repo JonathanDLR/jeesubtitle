@@ -7,6 +7,7 @@ package jdlr.subtitle.beans;
  */
 public class BDDInfo {
 	private int line_number;
+	private int line_sub_number;
 	private String line_min;
 	private String line_text;
 	private String fileName;
@@ -19,6 +20,14 @@ public class BDDInfo {
 		this.line_number = line_number;
 	}
 	
+	public int getLine_sub_number() {
+		return line_sub_number;
+	}
+
+	public void setLine_sub_number(int line_sub_number) {
+		this.line_sub_number = line_sub_number;
+	}
+
 	public String getLine_min() {
 		return line_min;
 	}

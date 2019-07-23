@@ -23,6 +23,11 @@
         <input id="sendChoose" type="submit" value="Choose" style="position:fixed; top: 100px; right: 10px;" />
 	</form>
 	
+	<form method="post" action="export">
+		<input type="hidden" name="fileExp" id="fileExp" value="${ nameFile }" />
+		<input id="export" type="submit" value="Export" style="position:fixed; top: 140px; right: 10px;" />
+	</form>
+	
     <form method="post" action="send">   
         <label for="send" style="position:fixed; top: 15px; right: 80px;">Send to BDD: </label>
         <input id="send" type="submit" style="position:fixed; top: 10px; right: 10px;" />
@@ -32,6 +37,7 @@
          
 	    <table>
 	    	<c:set var="i" value="0" />
+	    	<c:set var="j" value="0" />
 	        <c:forEach items="${ subtitles }" var="line" varStatus="status">
 	        	<tr>
 	        		<c:if test="${ line.matches('[0-9]+') }">
@@ -42,6 +48,8 @@
 	        		<c:choose>
 	        		
 		        		<c:when test="${ not empty line  && not line.contains('-->') &&  not line.matches('[0-9]+') }">
+		        			<c:set var="j" value="${ j + 1 }" />
+		        			<input type="hidden" name="sub${ i }" id="sub${ i }" value="${ j }" />
 		        			<td><input type="text" name="line${ i }" id="line${ i }" size="35" /></td>
 		        		</c:when>
 		        		

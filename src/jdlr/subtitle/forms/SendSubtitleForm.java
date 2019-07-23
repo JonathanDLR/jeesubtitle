@@ -54,6 +54,9 @@ public class SendSubtitleForm {
 						k = j;
 						j = ++j;
 					}
+					if (paramName.equals("sub"+k)) {
+						subs.get(k-1).setLine_sub_number(Integer.parseInt(paramValue));
+					}
 					if (paramName.equals("min"+k)) {
 						subs.get(k-1).setLine_min(paramValue);
 					}
