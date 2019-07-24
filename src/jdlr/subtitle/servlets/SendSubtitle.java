@@ -1,7 +1,9 @@
 package jdlr.subtitle.servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -52,20 +54,49 @@ public class SendSubtitle extends HttpServlet {
 		
 		bddtitle.setFileName(form.getFileName());
 		
+		// CHECK IF FILE IS IN THE BDD
 		try {
-			titleSubDAO.addTitle(bddtitle);
-			request.setAttribute("fileName", form.getFileName());
+			List<BDDTitle> BDDTitles = titleSubDAO.getAllBDDTitle();
+			List<String> BDDTitlesString = new ArrayList<String>();
+			
+			for (BDDTitle title: BDDTitles) {
+				BDDTitlesString.add(title.getFileName());
+			}
+			
+			// IF FILE IS IN THE BDD WE JUST UPDATE INFO ELSE WE CREATE THE FILE AND THE INFO
+			if (BDDTitlesString.contains(bddtitle.getFileName())) {
+				for (BDDInfo info : form.getSubs()) {
+					try {
+						if (info.getLine_text() != null && !info.getLine_text().isEmpty()) {
+							infoSubDAO.updInfo(info);
+						}					
+					} catch (DAOException e) {
+						request.setAttribute("error", e.getMessage());
+					}
+				}
+			} else { 
+				try {
+					titleSubDAO.addTitle(bddtitle);
+					request.setAttribute("fileName", form.getFileName());
+				} catch (DAOException e) {
+					request.setAttribute("error", e.getMessage());
+				}
+				
+				for (BDDInfo info : form.getSubs()) {
+					try {
+						infoSubDAO.addInfo(info);
+					} catch (DAOException e) {
+						request.setAttribute("error", e.getMessage());
+					}
+				}
+			}
 		} catch (DAOException e) {
 			request.setAttribute("error", e.getMessage());
 		}
 		
-		for (BDDInfo info : form.getSubs()) {
-			try {
-				infoSubDAO.addInfo(info);
-			} catch (DAOException e) {
-				request.setAttribute("error", e.getMessage());
-			}
-		}
+		
+		
+		
 		
 		this.getServletContext().getRequestDispatcher("/WEB-INF/send.jsp").forward(request, response);
 	}

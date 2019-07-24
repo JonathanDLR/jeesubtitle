@@ -19,7 +19,10 @@ public class SendSubtitleForm {
 	private ArrayList<String> lineNumber = null;
 	private ArrayList<BDDInfo> subs = new ArrayList<BDDInfo>();
 	private int j = 1;
-	private int k;
+	private int k = 1;
+	private int l;
+	private int paramNumber = 0;
+	private String paramMin = null;
 	
 	/**
 	 * adding sub to ArrayList
@@ -32,7 +35,7 @@ public class SendSubtitleForm {
 		
 		// Creation object BDDInfo
 		for (String line : lineNumber) {
-			if (line.contains("number")) {
+			if (line.contains("sub")) {
 				BDDInfo bddinfo = new BDDInfo();
 				subs.add(bddinfo);
 			}
@@ -47,21 +50,27 @@ public class SendSubtitleForm {
 			for (int i = 0; i < paramValues.length; i ++) {
 				String paramValue = paramValues[i];
 				
-				if (!paramValue.isEmpty() && paramValue != null && !paramName.equals("fileName")) {
-					if (paramName.equals("number"+j)) {
-						subs.get(j-1).setLine_number(Integer.parseInt(paramValue));
+				if (!paramValue.isEmpty() && paramValue != null && !paramName.equals("fileName")) {					
+					if (paramName.equals("number" + k)) {
+						paramNumber = Integer.parseInt(paramValue);
+					}
+					
+					if (paramName.equals("min" + k)) {
+						paramMin = paramValue;
+						k = ++k;
+					}
+					
+					if (paramName.equals("sub" + j)) {
+						subs.get(j-1).setLine_number(paramNumber);
 						subs.get(j-1).setFileName(fileName);
-						k = j;
+						subs.get(j-1).setLine_sub_number(Integer.parseInt(paramValue));
+						subs.get(j-1).setLine_min(paramMin);
+						l = j;
 						j = ++j;
 					}
-					if (paramName.equals("sub"+k)) {
-						subs.get(k-1).setLine_sub_number(Integer.parseInt(paramValue));
-					}
-					if (paramName.equals("min"+k)) {
-						subs.get(k-1).setLine_min(paramValue);
-					}
-					if (paramName.equals("line"+k)) {
-						subs.get(k-1).setLine_text(paramValue);
+									
+					if (paramName.equals("line" + l)) {
+						subs.get(l-1).setLine_text(paramValue);
 					}
 				}
 			}

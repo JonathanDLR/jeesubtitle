@@ -49,17 +49,17 @@
 	        		
 		        		<c:when test="${ not empty line  && not line.contains('-->') &&  not line.matches('[0-9]+') }">
 		        			<c:set var="j" value="${ j + 1 }" />
-		        			<input type="hidden" name="sub${ i }" id="sub${ i }" value="${ j }" />
-		        			<td><input type="text" name="line${ i }" id="line${ i }" size="35" /></td>
+		        			<input type="hidden" name="sub${ j }" id="sub${ j }" value="${ j }" />
+		        			<td><input type="text" name="line${ j }" id="line${ j }" size="35" /></td>
 		        		</c:when>
 		        		
 		        		<c:when test="${ line.contains('-->') }">
 		        			<td><input type="hidden" name="min${ i }" id="min${ i }" value="${ line }"/></td>
 		        		</c:when>
 		        		
-		        		<c:otherwise>
+		        		<c:when test="${ line.matches('[0-9]+') }">
 		        			<td><input type="hidden" name="number${ i }" id="number${ i }" value="${ line }"/></td>
-		        		</c:otherwise>
+		        		</c:when>
 		        	</c:choose>
 	        	</tr>
 	    	</c:forEach>

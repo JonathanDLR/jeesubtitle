@@ -60,6 +60,46 @@ public class InfoSubDAOImpl implements InfoSubDAO {
 	}
 	
 	@Override
+	public void updInfo(BDDInfo bddinfo) throws DAOException {
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		
+		try {
+			connection = daoFactory.getConnection();
+			preparedStatement = (PreparedStatement) 
+					connection.clientPrepareStatement("UPDATE file_spec JOIN file_sub ON file_spec.file_id = file_sub.id"
+							+ " SET line_text = ? WHERE line_number = ? AND line_sub_number = ? AND file_sub.file_name ="
+							+ " ?;");
+			preparedStatement.setString(1, bddinfo.getLine_text());
+			preparedStatement.setLong(2, bddinfo.getLine_number());
+			preparedStatement.setLong(3, bddinfo.getLine_sub_number());
+			preparedStatement.setString(4, bddinfo.getFileName());
+			
+			preparedStatement.executeUpdate();
+			connection.commit();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			try {
+				if (connection != null) {
+					connection.rollback();
+				}
+			} catch (SQLException e2) {
+				e2.printStackTrace();
+			}
+			throw new DAOException("Impossible de communiquer avec le base de données.");
+		}
+		finally {
+			try {
+				if (connection != null) {
+					connection.close();
+				}
+			} catch (SQLException e) {
+				throw new DAOException("Impossible de communiquer avec le base de données.");
+			}
+		}
+	}
+	
+	@Override
 	public List<BDDInfo> getAllBDDInfo() throws DAOException {
 		List<BDDInfo> BDDInfos = new ArrayList<BDDInfo>();
 		Connection connection = null;

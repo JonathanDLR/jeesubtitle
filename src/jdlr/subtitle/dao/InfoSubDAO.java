@@ -13,6 +13,13 @@ public interface InfoSubDAO {
 	void addInfo(BDDInfo bddinfo) throws DAOException;
 	
 	/**
+	 * Update info in the bdd
+	 * @param bddinfo
+	 * @throws DAOException
+	 */
+	void updInfo(BDDInfo bddinfo) throws DAOException;
+	
+	/**
 	 * Get info from the BDD
 	 * @return Array of infos
 	 * @throws DAOException
