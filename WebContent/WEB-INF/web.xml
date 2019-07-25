@@ -9,16 +9,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
   <servlet>
-    <servlet-name>EditSubtitle</servlet-name>
-    <servlet-class>jdlr.subtitle.servlets.EditSubtitle</servlet-class>
+    <servlet-name>AccueilSubtitle</servlet-name>
+    <servlet-class>jdlr.subtitle.servlets.AccueilSubtitle</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>EditSubtitle</servlet-name>
-    <url-pattern>/edit</url-pattern>
+    <servlet-name>AccueilSubtitle</servlet-name>
+    <url-pattern>/</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>UploadSubtitle</servlet-name>
     <servlet-class>jdlr.subtitle.servlets.UploadSubtitle</servlet-class>
@@ -33,17 +31,23 @@
     <servlet-name>UploadSubtitle</servlet-name>
     <url-pattern>/upload</url-pattern>
   </servlet-mapping>
-  
   <servlet>
-    <servlet-name>AccueilSubtitle</servlet-name>
-    <servlet-class>jdlr.subtitle.servlets.AccueilSubtitle</servlet-class>
+    <servlet-name>EditSubtitle</servlet-name>
+    <servlet-class>jdlr.subtitle.servlets.EditSubtitle</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>AccueilSubtitle</servlet-name>
-    <url-pattern>/</url-pattern>
+    <servlet-name>EditSubtitle</servlet-name>
+    <url-pattern>/edit</url-pattern>
   </servlet-mapping>
-  
-   <servlet>
+  <servlet>
+    <servlet-name>ExportSubtitle</servlet-name>
+    <servlet-class>jdlr.subtitle.servlets.ExportSubtitle</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExportSubtitle</servlet-name>
+    <url-pattern>/export</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <servlet-name>SendSubtitle</servlet-name>
     <servlet-class>jdlr.subtitle.servlets.SendSubtitle</servlet-class>
   </servlet>
@@ -51,7 +55,6 @@
     <servlet-name>SendSubtitle</servlet-name>
     <url-pattern>/send</url-pattern>
   </servlet-mapping>
-  
   <jsp-config>
     <jsp-property-group>
       <url-pattern>*.jsp</url-pattern>

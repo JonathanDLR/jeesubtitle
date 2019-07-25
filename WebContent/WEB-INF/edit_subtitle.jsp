@@ -9,6 +9,8 @@
 <body>
 	<%@ include file="menu.jsp" %>
 	
+	<c:if test="${ !empty error }"><p style="color:red;"><c:out value="${ error }" /></p></c:if>
+	
 	<h1>Edit Subtitle</h1>
 	
 	<form method="post" action="edit">
@@ -21,11 +23,6 @@
         </select>
         
         <input id="sendChoose" type="submit" value="Choose" style="position:fixed; top: 100px; right: 10px;" />
-	</form>
-	
-	<form method="post" action="export">
-		<input type="hidden" name="fileExp" id="fileExp" value="${ nameFile }" />
-		<input id="export" type="submit" value="Export" style="position:fixed; top: 140px; right: 10px;" />
 	</form>
 	
     <form method="post" action="send">   
@@ -50,7 +47,7 @@
 		        		<c:when test="${ not empty line  && not line.contains('-->') &&  not line.matches('[0-9]+') }">
 		        			<c:set var="j" value="${ j + 1 }" />
 		        			<input type="hidden" name="sub${ j }" id="sub${ j }" value="${ j }" />
-		        			<td><input type="text" name="line${ j }" id="line${ j }" size="35" /></td>
+		        			<td><input type="text" name="line${ j }" id="line${ j }" size="35" value="${ subs[j-1].getLine_text() }"/></td>
 		        		</c:when>
 		        		
 		        		<c:when test="${ line.contains('-->') }">

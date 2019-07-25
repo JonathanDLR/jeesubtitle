@@ -100,18 +100,22 @@ public class InfoSubDAOImpl implements InfoSubDAO {
 	}
 	
 	@Override
-	public List<BDDInfo> getAllBDDInfo() throws DAOException {
+	public List<BDDInfo> getAllBDDInfo(String fileNameSend) throws DAOException {
 		List<BDDInfo> BDDInfos = new ArrayList<BDDInfo>();
 		Connection connection = null;
-		Statement statement = null;
+		PreparedStatement preparedStatement = null;
 		ResultSet result = null;
 		
 		try {
 			connection = daoFactory.getConnection();
-			statement = (Statement) connection.createStatement();
-			result = statement.executeQuery("SELECT line_number, line_sub_number, line_min, line_text,"
+			preparedStatement = (PreparedStatement) 
+					connection.clientPrepareStatement("SELECT line_number, line_sub_number, line_min, line_text,"
 					+ " file_sub.file_name as file_name FROM file_spec JOIN file_sub ON file_spec.file_id = "
-					+ "file_sub.id;");
+					+ "file_sub.id WHERE file_sub.file_name = ?;");
+			
+			preparedStatement.setString(1, fileNameSend);
+			
+			result = preparedStatement.executeQuery();
 			
 			while (result.next()) {
 				int line_number = result.getInt("line_number");

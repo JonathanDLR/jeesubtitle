@@ -24,5 +24,5 @@ public interface InfoSubDAO {
 	 * @return Array of infos
 	 * @throws DAOException
 	 */
-	List<BDDInfo> getAllBDDInfo() throws DAOException;
+	List<BDDInfo> getAllBDDInfo(String fileName) throws DAOException;
 }

@@ -59,11 +59,10 @@ public class EditSubtitle extends HttpServlet {
 			}
 			
 			if (BDDTitlesString.contains(form.getFileSubName())) {
-				System.out.print("YOUHOU!");
+				request.setAttribute("subs", infoSubDAO.getAllBDDInfo(form.getFileSubName()));
 			}
 		} catch (DAOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			request.setAttribute("error", e.getMessage());
 		}
 		
 		
