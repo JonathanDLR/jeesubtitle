@@ -15,6 +15,7 @@ import jdlr.subtitle.beans.BDDTitle;
 import jdlr.subtitle.dao.DAOException;
 import jdlr.subtitle.dao.DAOFactory;
 import jdlr.subtitle.dao.InfoSubDAO;
+import jdlr.subtitle.utilities.ContextHandler;
 
 /**
  * Data processing for exporting the sub
@@ -53,11 +54,9 @@ public class ExportFileForm {
 			
 			for(String line : BDDinfosString) {
 				if (line != null) {
-					System.out.print(line);
 					bw.write(line);
 					bw.newLine();
 				} else {
-					System.out.print("null");
 					bw.write("null");
 					bw.newLine();
 				}

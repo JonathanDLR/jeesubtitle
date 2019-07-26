@@ -17,6 +17,7 @@ import jdlr.subtitle.dao.DAOFactory;
 import jdlr.subtitle.dao.InfoSubDAO;
 import jdlr.subtitle.dao.TitleSubDAO;
 import jdlr.subtitle.forms.EditFileForm;
+import jdlr.subtitle.utilities.ContextHandler;
 import jdlr.subtitle.utilities.SubtitlesHandler;
 
 @WebServlet("/EditSubtitle")
@@ -71,7 +72,7 @@ public class EditSubtitle extends HttpServlet {
 	
 	protected static final void scan(HttpServletRequest request) {
 		EditFileForm form = new EditFileForm();
-		ArrayList<String> fileList = form.scanPath("/home/jdlr/Documents/up_sub");
+		ArrayList<String> fileList = form.scanPath("/home/jdlr/Documents/up_sub/");
 		
 		request.setAttribute("fileList", fileList);
 	}

@@ -1,5 +1,6 @@
 package jdlr.subtitle.forms;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Enumeration;
@@ -27,8 +28,9 @@ public class SendSubtitleForm {
 	/**
 	 * adding sub to ArrayList
 	 * @param request
+	 * @throws UnsupportedEncodingException 
 	 */
-	public void getSubtitle(HttpServletRequest request) {
+	public void getSubtitle(HttpServletRequest request) throws UnsupportedEncodingException {	
 		fileName = request.getParameter("fileName");
 		paramNames = request.getParameterNames();
 		lineNumber = Collections.list(paramNames);
