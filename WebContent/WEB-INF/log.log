@@ -1,53 +1,65 @@
-juil. 25, 2019 4:43:10 PM org.apache.catalina.startup.VersionLoggerListener log
+juil. 26, 2019 4:37:39 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Version du serveur:        Apache Tomcat/9.0.20
-juil. 25, 2019 4:43:10 PM org.apache.catalina.startup.VersionLoggerListener log
+juil. 26, 2019 4:37:39 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Serveur compilé:       May 3 2019 22:26:00 UTC
-juil. 25, 2019 4:43:10 PM org.apache.catalina.startup.VersionLoggerListener log
+juil. 26, 2019 4:37:39 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Version du serveur:      9.0.20.0
-juil. 25, 2019 4:43:10 PM org.apache.catalina.startup.VersionLoggerListener log
+juil. 26, 2019 4:37:39 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Nom de l'OS:           Linux
-juil. 25, 2019 4:43:10 PM org.apache.catalina.startup.VersionLoggerListener log
+juil. 26, 2019 4:37:39 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Version de l'OS:        4.19.0-5-amd64
-juil. 25, 2019 4:43:10 PM org.apache.catalina.startup.VersionLoggerListener log
+juil. 26, 2019 4:37:39 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Architecture:          amd64
-juil. 25, 2019 4:43:10 PM org.apache.catalina.startup.VersionLoggerListener log
+juil. 26, 2019 4:37:39 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Répertoire de Java:     /usr/lib/jvm/java-11-oracle
-juil. 25, 2019 4:43:10 PM org.apache.catalina.startup.VersionLoggerListener log
+juil. 26, 2019 4:37:39 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Version de la JVM:           11.0.2+9-LTS
-juil. 25, 2019 4:43:10 PM org.apache.catalina.startup.VersionLoggerListener log
+juil. 26, 2019 4:37:39 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Fournisseur de la JVM:            Oracle Corporation
-juil. 25, 2019 4:43:10 PM org.apache.catalina.startup.VersionLoggerListener log
+juil. 26, 2019 4:37:39 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: CATALINA_BASE:         /home/jdlr/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0
-juil. 25, 2019 4:43:10 PM org.apache.catalina.startup.VersionLoggerListener log
+juil. 26, 2019 4:37:39 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: CATALINA_HOME:         /home/jdlr/apache-tomcat9
-juil. 25, 2019 4:43:10 PM org.apache.catalina.startup.VersionLoggerListener log
+juil. 26, 2019 4:37:39 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Argument de la ligne de commande: -Dcatalina.base=/home/jdlr/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0
-juil. 25, 2019 4:43:10 PM org.apache.catalina.startup.VersionLoggerListener log
+juil. 26, 2019 4:37:39 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Argument de la ligne de commande: -Dcatalina.home=/home/jdlr/apache-tomcat9
-juil. 25, 2019 4:43:10 PM org.apache.catalina.startup.VersionLoggerListener log
+juil. 26, 2019 4:37:39 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Argument de la ligne de commande: -Dwtp.deploy=/home/jdlr/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps
-juil. 25, 2019 4:43:10 PM org.apache.catalina.startup.VersionLoggerListener log
+juil. 26, 2019 4:37:39 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Argument de la ligne de commande: -Dfile.encoding=UTF-8
-juil. 25, 2019 4:43:10 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+juil. 26, 2019 4:37:39 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
 INFO: La librairie Apache Tomcat Native basée sur APR qui permet des performances optimales dans les environnements de production n'a pas été trouvée sur le java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
-juil. 25, 2019 4:43:11 PM org.apache.coyote.AbstractProtocol init
+juil. 26, 2019 4:37:40 PM org.apache.coyote.AbstractProtocol init
 INFO: Initialisation du gestionnaire de protocole ["http-nio-8080"]
-juil. 25, 2019 4:43:11 PM org.apache.coyote.AbstractProtocol init
+juil. 26, 2019 4:37:40 PM org.apache.coyote.AbstractProtocol init
 INFO: Initialisation du gestionnaire de protocole ["ajp-nio-8009"]
-juil. 25, 2019 4:43:11 PM org.apache.catalina.startup.Catalina load
-INFO: L'initialisation du serveur a pris [2 691] millisecondes
-juil. 25, 2019 4:43:11 PM org.apache.catalina.core.StandardService startInternal
+juil. 26, 2019 4:37:40 PM org.apache.catalina.startup.Catalina load
+INFO: L'initialisation du serveur a pris [2 828] millisecondes
+juil. 26, 2019 4:37:40 PM org.apache.catalina.core.StandardService startInternal
 INFO: Démarrage du service [Catalina]
-juil. 25, 2019 4:43:11 PM org.apache.catalina.core.StandardEngine startInternal
+juil. 26, 2019 4:37:40 PM org.apache.catalina.core.StandardEngine startInternal
 INFO: Démarrage du moteur de Servlets: [Apache Tomcat/9.0.20]
-juil. 25, 2019 4:43:13 PM org.apache.jasper.servlet.TldScanner scanJars
+juil. 26, 2019 4:37:42 PM org.apache.jasper.servlet.TldScanner scanJars
 INFO: Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
-juil. 25, 2019 4:43:14 PM org.apache.jasper.servlet.TldScanner scanJars
+juil. 26, 2019 4:37:43 PM org.apache.jasper.servlet.TldScanner scanJars
 INFO: Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
-juil. 25, 2019 4:43:14 PM org.apache.coyote.AbstractProtocol start
+juil. 26, 2019 4:37:43 PM org.apache.coyote.AbstractProtocol start
 INFO: Démarrage du gestionnaire de protocole ["http-nio-8080"]
-juil. 25, 2019 4:43:14 PM org.apache.coyote.AbstractProtocol start
+juil. 26, 2019 4:37:43 PM org.apache.coyote.AbstractProtocol start
 INFO: Démarrage du gestionnaire de protocole ["ajp-nio-8009"]
-juil. 25, 2019 4:43:14 PM org.apache.catalina.startup.Catalina start
-INFO: Le démarrage du serveur a pris [2 913] millisecondes
-100:00:00,535 --> 00:00:02,462nullz200:00:02,462 --> 00:00:04,389a
+juil. 26, 2019 4:37:43 PM org.apache.catalina.startup.Catalina start
+INFO: Le démarrage du serveur a pris [2 574] millisecondes
+juil. 26, 2019 4:55:26 PM org.apache.catalina.core.StandardContext reload
+INFO: Le rechargement du contexte [/subtitle] a démarré
+juil. 26, 2019 4:55:26 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesJdbc
+WARNING: L'application web [subtitle] a enregistré un pilote JDBC [com.mysql.jdbc.Driver], mais ne l'a pas désenregistré avant l'arrêt de l'application.  Pour éviter une fuite de mémoire, le pilote JDBC a été désenregistré de force.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.catalina.loader.WebappClassLoaderBase (file:/home/jdlr/apache-tomcat9/lib/catalina.jar) to field java.io.ObjectStreamClass$Caches.localDescs
+WARNING: Please consider reporting this to the maintainers of org.apache.catalina.loader.WebappClassLoaderBase
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+juil. 26, 2019 4:55:27 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+juil. 26, 2019 4:55:27 PM org.apache.catalina.core.StandardContext reload
+INFO: Le rechargement de ce contexte est terminé

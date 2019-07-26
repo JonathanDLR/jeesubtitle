@@ -24,7 +24,8 @@ public class DAOFactory {
 			
 		}
 		
-		DAOFactory instance = new DAOFactory("jdbc:mysql://localhost:3306/j2e_subtitle", "root", "marie89");
+		DAOFactory instance = new DAOFactory("jdbc:mysql://localhost:3306/j2e_subtitle?useUnicode=yes&characterEncoding=UTF-8",
+				"root", "xxx");
 		
 		return instance;
 	}

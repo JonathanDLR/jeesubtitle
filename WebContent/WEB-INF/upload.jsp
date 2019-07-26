@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,11 +10,11 @@
 
 <h1>Upload new file to subtitle</h1>
 
-<c:if test="${ !empty form.fileData }"><p><c:out value="Le fichier ${ form.fileData } a Ã©tÃ© uploadÃ© !" /></p></c:if>
+<c:if test="${ !empty form.fileData }"><p><c:out value="Le fichier ${ form.fileData } a été uploadé !" /></p></c:if>
 	
     <form method="post" action="upload" enctype="multipart/form-data">
         <p>
-            <label for="urfile">Fichier Ã  envoyer : </label>
+            <label for="urfile">Fichier à envoyer : </label>
             <input type="file" name="urfile" id="urfile" />
         </p>
         
