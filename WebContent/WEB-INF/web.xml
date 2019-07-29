@@ -27,6 +27,12 @@
     <url-pattern>/*</url-pattern>
 </filter-mapping>
 
+  <listener>
+    <listener-class>
+             jdlr.subtitle.utilities.ContextHandler
+        </listener-class>
+  </listener>
+
   <servlet>
     <servlet-name>AccueilSubtitle</servlet-name>
     <servlet-class>jdlr.subtitle.servlets.AccueilSubtitle</servlet-class>

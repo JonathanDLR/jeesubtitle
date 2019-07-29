@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.Part;
@@ -21,7 +22,7 @@ import jdlr.subtitle.utilities.ContextHandler;
  */
 public class UploadFileForm {
 	public static final int TMP_SIZE = 10240;
-	public static final String FILE_PATH = "/home/jdlr/Documents/up_sub/";
+	public static final String FILE_PATH = "/WEB-INF/srt/";
 	private String fileName;
 	private String fileData;
 	
@@ -32,6 +33,8 @@ public class UploadFileForm {
 	 * @throws ServletException
 	 */
 	public void uploadFile(HttpServletRequest request) throws IOException, ServletException {
+		String path = getRealPath();
+		
 		fileName = request.getParameter("urfilename");
 		request.setAttribute("urfilename", fileName);
 		
@@ -44,7 +47,7 @@ public class UploadFileForm {
 			
 			fileData = fileData.substring(fileData.lastIndexOf('/') + 1).substring(fileData.lastIndexOf('\\') + 1);
 			
-			writeFile(part, fileData, FILE_PATH);
+			writeFile(part, fileData, path);
 			
 			request.setAttribute(inputName, fileData);
 		}
@@ -99,6 +102,13 @@ public class UploadFileForm {
 			}
 		}
 		
+	}
+	
+	/**
+	 * @return Real path string of /srt folder in application context
+	 */
+	private static String getRealPath() {
+		return ContextHandler.getContext().getRealPath(FILE_PATH);
 	}
 
 	// GETTERS SETTERS

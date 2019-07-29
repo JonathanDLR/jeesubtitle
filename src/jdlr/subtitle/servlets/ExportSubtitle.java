@@ -64,7 +64,7 @@ public class ExportSubtitle extends HttpServlet {
 		
 		ExportFileForm form = new ExportFileForm();
 		
-		form.exportFile(request, BDDInfos);
+		form.exportFile(request, response, BDDInfos);
 		
 		scan(request);
 		

@@ -4,11 +4,14 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import jdlr.subtitle.beans.BDDInfo;
 import jdlr.subtitle.beans.BDDTitle;
@@ -23,7 +26,7 @@ import jdlr.subtitle.utilities.ContextHandler;
  *
  */
 public class ExportFileForm {
-	public static final String FILE_PATH = "/home/jdlr/Documents/exp_sub/";
+	// public static final String FILE_PATH = "/WEB-INF/translate/";
 	private List<String> BDDinfosString = new ArrayList<String>();
 	
 	/**
@@ -32,7 +35,7 @@ public class ExportFileForm {
 	 * @throws IOException
 	 */
 	@SuppressWarnings("resource")
-	public void exportFile(HttpServletRequest request, List<BDDInfo> BDDInfos) throws IOException {
+	public void exportFile(HttpServletRequest request, HttpServletResponse response, List<BDDInfo> BDDInfos) throws IOException {
 		String title = request.getParameter("choose");
 	
 		// Formatting array to write the file
@@ -48,24 +51,38 @@ public class ExportFileForm {
 			}		
 		}
 		
-		File path = new File(FILE_PATH, title);
+		// String thePath = getRealPath();
+		
+		// File path = new File(title);
 		try {
-			BufferedWriter bw = new BufferedWriter(new FileWriter(path));
-			
+			response.setContentType("text/plain");
+			response.setHeader("Content-Disposition", "attachment; filename="+title+"");
+			OutputStream outputStream = response.getOutputStream();
 			for(String line : BDDinfosString) {
 				if (line != null) {
-					bw.write(line);
-					bw.newLine();
+					outputStream.write(line.getBytes());
+					// outputStream.newLine();
 				} else {
-					bw.write("null");
-					bw.newLine();
+					outputStream.write("null".getBytes());
+					// bw.newLine();
 				}
 			}
 			String message = "Export OK";
 			request.setAttribute("message", message);
-			bw.close();
+			
+			outputStream.flush();
+			outputStream.close();
+//			bw.write(response.getOutputStream());
+//			bw.close();
 		} catch (IOException e) {
 			request.setAttribute("message", e.getMessage());
 		}
 	}
+	
+	/**
+	 * @return Real path string of /srt folder in application context
+	 */
+//	private static String getRealPath() {
+//		return ContextHandler.getContext().getRealPath(FILE_PATH);
+//	}
 }

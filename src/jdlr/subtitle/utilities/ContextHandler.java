@@ -4,6 +4,11 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
+/**
+ * Listener of context app
+ * @author jdlr
+ *
+ */
 public class ContextHandler implements ServletContextListener {
 	private static ServletContext context;
     

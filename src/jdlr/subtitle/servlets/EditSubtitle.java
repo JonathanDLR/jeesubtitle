@@ -1,8 +1,13 @@
 package jdlr.subtitle.servlets;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -70,9 +75,17 @@ public class EditSubtitle extends HttpServlet {
 		this.getServletContext().getRequestDispatcher("/WEB-INF/edit_subtitle.jsp").forward(request, response);
 	}
 	
-	protected static final void scan(HttpServletRequest request) {
+	/**
+	 * Scan srt folder
+	 * @param request
+	 */
+	protected final void scan(HttpServletRequest request) {
+
+		String path = this.getServletContext().getRealPath("WEB-INF/srt/");
+		
+		
 		EditFileForm form = new EditFileForm();
-		ArrayList<String> fileList = form.scanPath("/home/jdlr/Documents/up_sub/");
+		ArrayList<String> fileList = form.scanPath(path);
 		
 		request.setAttribute("fileList", fileList);
 	}
