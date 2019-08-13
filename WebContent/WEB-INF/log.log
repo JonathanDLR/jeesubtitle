@@ -1,120 +1,52 @@
-juil. 29, 2019 3:55:31 PM org.apache.catalina.startup.VersionLoggerListener log
+août 06, 2019 5:26:28 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Version du serveur:        Apache Tomcat/9.0.20
-juil. 29, 2019 3:55:31 PM org.apache.catalina.startup.VersionLoggerListener log
+août 06, 2019 5:26:28 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Serveur compilé:       May 3 2019 22:26:00 UTC
-juil. 29, 2019 3:55:31 PM org.apache.catalina.startup.VersionLoggerListener log
+août 06, 2019 5:26:28 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Version du serveur:      9.0.20.0
-juil. 29, 2019 3:55:31 PM org.apache.catalina.startup.VersionLoggerListener log
+août 06, 2019 5:26:28 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Nom de l'OS:           Linux
-juil. 29, 2019 3:55:31 PM org.apache.catalina.startup.VersionLoggerListener log
+août 06, 2019 5:26:28 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Version de l'OS:        4.19.0-5-amd64
-juil. 29, 2019 3:55:31 PM org.apache.catalina.startup.VersionLoggerListener log
+août 06, 2019 5:26:28 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Architecture:          amd64
-juil. 29, 2019 3:55:32 PM org.apache.catalina.startup.VersionLoggerListener log
+août 06, 2019 5:26:28 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Répertoire de Java:     /usr/lib/jvm/java-11-oracle
-juil. 29, 2019 3:55:32 PM org.apache.catalina.startup.VersionLoggerListener log
+août 06, 2019 5:26:28 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Version de la JVM:           11.0.2+9-LTS
-juil. 29, 2019 3:55:32 PM org.apache.catalina.startup.VersionLoggerListener log
+août 06, 2019 5:26:28 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Fournisseur de la JVM:            Oracle Corporation
-juil. 29, 2019 3:55:32 PM org.apache.catalina.startup.VersionLoggerListener log
+août 06, 2019 5:26:28 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: CATALINA_BASE:         /home/jdlr/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0
-juil. 29, 2019 3:55:32 PM org.apache.catalina.startup.VersionLoggerListener log
+août 06, 2019 5:26:28 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: CATALINA_HOME:         /home/jdlr/apache-tomcat9
-juil. 29, 2019 3:55:32 PM org.apache.catalina.startup.VersionLoggerListener log
+août 06, 2019 5:26:28 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Argument de la ligne de commande: -Dcatalina.base=/home/jdlr/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0
-juil. 29, 2019 3:55:32 PM org.apache.catalina.startup.VersionLoggerListener log
+août 06, 2019 5:26:28 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Argument de la ligne de commande: -Dcatalina.home=/home/jdlr/apache-tomcat9
-juil. 29, 2019 3:55:32 PM org.apache.catalina.startup.VersionLoggerListener log
+août 06, 2019 5:26:28 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Argument de la ligne de commande: -Dwtp.deploy=/home/jdlr/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps
-juil. 29, 2019 3:55:32 PM org.apache.catalina.startup.VersionLoggerListener log
+août 06, 2019 5:26:28 PM org.apache.catalina.startup.VersionLoggerListener log
 INFO: Argument de la ligne de commande: -Dfile.encoding=UTF-8
-juil. 29, 2019 3:55:32 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+août 06, 2019 5:26:28 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
 INFO: La librairie Apache Tomcat Native basée sur APR qui permet des performances optimales dans les environnements de production n'a pas été trouvée sur le java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
-juil. 29, 2019 3:55:32 PM org.apache.coyote.AbstractProtocol init
+août 06, 2019 5:26:29 PM org.apache.coyote.AbstractProtocol init
 INFO: Initialisation du gestionnaire de protocole ["http-nio-8080"]
-juil. 29, 2019 3:55:33 PM org.apache.coyote.AbstractProtocol init
+août 06, 2019 5:26:29 PM org.apache.coyote.AbstractProtocol init
 INFO: Initialisation du gestionnaire de protocole ["ajp-nio-8009"]
-juil. 29, 2019 3:55:33 PM org.apache.catalina.startup.Catalina load
-INFO: L'initialisation du serveur a pris [2 438] millisecondes
-juil. 29, 2019 3:55:33 PM org.apache.catalina.core.StandardService startInternal
+août 06, 2019 5:26:29 PM org.apache.catalina.startup.Catalina load
+INFO: L'initialisation du serveur a pris [2 659] millisecondes
+août 06, 2019 5:26:30 PM org.apache.catalina.core.StandardService startInternal
 INFO: Démarrage du service [Catalina]
-juil. 29, 2019 3:55:33 PM org.apache.catalina.core.StandardEngine startInternal
+août 06, 2019 5:26:30 PM org.apache.catalina.core.StandardEngine startInternal
 INFO: Démarrage du moteur de Servlets: [Apache Tomcat/9.0.20]
-juil. 29, 2019 3:55:35 PM org.apache.jasper.servlet.TldScanner scanJars
+août 06, 2019 5:26:32 PM org.apache.jasper.servlet.TldScanner scanJars
 INFO: Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
-juil. 29, 2019 3:55:35 PM org.apache.jasper.servlet.TldScanner scanJars
+août 06, 2019 5:26:33 PM org.apache.jasper.servlet.TldScanner scanJars
 INFO: Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
-juil. 29, 2019 3:55:35 PM org.apache.coyote.AbstractProtocol start
+août 06, 2019 5:26:33 PM org.apache.coyote.AbstractProtocol start
 INFO: Démarrage du gestionnaire de protocole ["http-nio-8080"]
-juil. 29, 2019 3:55:35 PM org.apache.coyote.AbstractProtocol start
+août 06, 2019 5:26:33 PM org.apache.coyote.AbstractProtocol start
 INFO: Démarrage du gestionnaire de protocole ["ajp-nio-8009"]
-juil. 29, 2019 3:55:35 PM org.apache.catalina.startup.Catalina start
-INFO: Le démarrage du serveur a pris [2 713] millisecondes
-juil. 29, 2019 3:55:42 PM org.apache.catalina.core.StandardWrapperValve invoke
-SEVERE: "Servlet.service()" pour la servlet [ExportSubtitle] a généré une exception
-java.lang.IllegalStateException: Impossible d'utiliser faire-suivre (forward) après que la réponse ait été envoyée
-	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:323)
-	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
-	at jdlr.subtitle.servlets.ExportSubtitle.doPost(ExportSubtitle.java:71)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:836)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1839)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-juil. 29, 2019 3:57:22 PM org.apache.catalina.core.StandardWrapperValve invoke
-SEVERE: "Servlet.service()" pour la servlet [ExportSubtitle] a généré une exception
-java.lang.IllegalStateException: Impossible d'utiliser faire-suivre (forward) après que la réponse ait été envoyée
-	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:323)
-	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
-	at jdlr.subtitle.servlets.ExportSubtitle.doPost(ExportSubtitle.java:71)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:836)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1839)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
+août 06, 2019 5:26:33 PM org.apache.catalina.startup.Catalina start
+INFO: Le démarrage du serveur a pris [3 573] millisecondes

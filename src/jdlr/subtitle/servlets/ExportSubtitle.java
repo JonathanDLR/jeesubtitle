@@ -68,7 +68,7 @@ public class ExportSubtitle extends HttpServlet {
 		
 		scan(request);
 		
-		this.getServletContext().getRequestDispatcher("/WEB-INF/export.jsp").forward(request, response);
+		// this.getServletContext().getRequestDispatcher("/WEB-INF/export.jsp").forward(request, response);
 	}
 
 	protected static void scan(HttpServletRequest request) {

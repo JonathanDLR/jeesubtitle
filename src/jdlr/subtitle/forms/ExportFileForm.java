@@ -1,10 +1,16 @@
 package jdlr.subtitle.forms;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +34,7 @@ import jdlr.subtitle.utilities.ContextHandler;
 public class ExportFileForm {
 	// public static final String FILE_PATH = "/WEB-INF/translate/";
 	private List<String> BDDinfosString = new ArrayList<String>();
+	private final String NEW_LINE = System.getProperty("line.separator");
 	
 	/**
 	 * Exporting in srt with BDD infos
@@ -51,38 +58,28 @@ public class ExportFileForm {
 			}		
 		}
 		
-		// String thePath = getRealPath();
+	
+		// Exporting the file
+		response.setContentType("text/plain");
+		response.setHeader("Content-Disposition", "attachment; filename="+title+"");
 		
-		// File path = new File(title);
-		try {
-			response.setContentType("text/plain");
-			response.setHeader("Content-Disposition", "attachment; filename="+title+"");
-			OutputStream outputStream = response.getOutputStream();
+		PrintWriter writer = response.getWriter();
+		
+		try {		
 			for(String line : BDDinfosString) {
 				if (line != null) {
-					outputStream.write(line.getBytes());
-					// outputStream.newLine();
+					writer.write(line);
+					writer.write(NEW_LINE);
 				} else {
-					outputStream.write("null".getBytes());
-					// bw.newLine();
+					writer.write("null");
+					writer.write(NEW_LINE);
 				}
-			}
-			String message = "Export OK";
-			request.setAttribute("message", message);
-			
-			outputStream.flush();
-			outputStream.close();
-//			bw.write(response.getOutputStream());
-//			bw.close();
-		} catch (IOException e) {
-			request.setAttribute("message", e.getMessage());
+			}	
+			writer.flush();
+		} finally {
+			if (writer != null) {
+				writer.close();
+			}	
 		}
 	}
-	
-	/**
-	 * @return Real path string of /srt folder in application context
-	 */
-//	private static String getRealPath() {
-//		return ContextHandler.getContext().getRealPath(FILE_PATH);
-//	}
 }
