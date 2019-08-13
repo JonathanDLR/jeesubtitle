@@ -66,7 +66,11 @@ public class ExportSubtitle extends HttpServlet {
 		
 		form.exportFile(request, response, BDDInfos);
 		
+		form.finalize();
+		
 		scan(request);
+		
+		System.gc();
 		
 		// this.getServletContext().getRequestDispatcher("/WEB-INF/export.jsp").forward(request, response);
 	}

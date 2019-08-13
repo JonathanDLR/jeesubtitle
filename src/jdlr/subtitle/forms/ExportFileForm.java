@@ -33,8 +33,14 @@ import jdlr.subtitle.utilities.ContextHandler;
  */
 public class ExportFileForm {
 	// public static final String FILE_PATH = "/WEB-INF/translate/";
-	private List<String> BDDinfosString = new ArrayList<String>();
-	private final String NEW_LINE = System.getProperty("line.separator");
+	private List<String> BDDinfosString;
+	private final String NEW_LINE;
+	private PrintWriter writer;
+	
+	public ExportFileForm()  {
+		BDDinfosString = new ArrayList<String>();
+		NEW_LINE = System.getProperty("line.separator");
+	}
 	
 	/**
 	 * Exporting in srt with BDD infos
@@ -63,7 +69,7 @@ public class ExportFileForm {
 		response.setContentType("text/plain");
 		response.setHeader("Content-Disposition", "attachment; filename="+title+"");
 		
-		PrintWriter writer = response.getWriter();
+		writer = response.getWriter();
 		
 		try {		
 			for(String line : BDDinfosString) {
@@ -78,8 +84,12 @@ public class ExportFileForm {
 			writer.flush();
 		} finally {
 			if (writer != null) {
-				writer.close();
+				// writer.close();
 			}	
 		}
+	}
+	
+	public void finalize() {
+		writer.close();
 	}
 }
